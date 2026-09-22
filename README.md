@@ -37,21 +37,25 @@
 
 ### 应用
 
-4. 运行一键脚本（默认 ZCode 安装在 `D:\ZCode`，其他位置加 `-ZCodeDir` 参数）：
-
-   ```powershell
-   .\apply-skin.ps1
-   ```
-
-   脚本会自动备份原版 `app.asar`、解包、注入皮肤、重打包并校验，约 1-2 分钟。
-
-5. 启动 ZCode，在 **设置 → 外观 → 界面主题** 选择 浅色 / 深色，即可看到 Snow Miku / Cyber Diva 双主题。
-
-### 还原
-
-```powershell
-.\restore-skin.ps1
-```
+ 4. **双击 `apply-skin.bat`**（推荐——Windows 默认禁止直接运行 .ps1，bat 启动器已自动绕过且窗口不会闪退），或在终端运行：
+ 
+    ```powershell
+    .\apply-skin.bat
+    # 或
+    powershell -ExecutionPolicy Bypass -File .\apply-skin.ps1
+    ```
+ 
+    脚本会自动备份原版 `app.asar`、解包、注入皮肤、重打包并校验，约 1-2 分钟。默认 ZCode 安装在 `D:\ZCode`，其他位置用 `.\apply-skin.bat "C:\Program Files\ZCode"` 传入。
+ 
+ 5. 启动 ZCode，在 **设置 → 外观 → 界面主题** 选择 浅色 / 深色，即可看到 Snow Miku / Cyber Diva 双主题。
+ 
+ ### 还原
+ 
+ 双击 `restore-skin.bat`，或：
+ 
+ ```powershell
+ .\restore-skin.bat
+ ```
 
 ## 🔄 更新后重新应用
 
